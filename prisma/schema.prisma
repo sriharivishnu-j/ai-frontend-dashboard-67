@@ -1,0 +1,14 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model DashboardData {
+  id    Int    @id @default(autoincrement())
+  value Float
+  time  DateTime @default(now())
+}
